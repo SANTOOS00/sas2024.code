@@ -7,6 +7,6 @@ int	fibonacci(int n)
 		return (-1);
 	if (n < 2)
 		return (n);
-        res =(n - 2) + (n - 1);
+        res =fibonacci(n - 2) + fibonacci(n - 1);
         return (res);
 }
