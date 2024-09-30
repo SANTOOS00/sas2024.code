@@ -1,13 +1,39 @@
 #include <stdio.h>
-int main()
+int main ()
 {
-    for (int i = 0;i < 6;i++)
+    int tabl[100];
+    int taill;
+    int pos;
+
+    printf("number n ;");
+    scanf("%d",&taill);
+
+    for (int i = 0;taill > i;i++)
     {
-        for(int j= i+1;j < 6;j++)
+        printf("number [%d] ;",i + 1);
+        scanf("%d",&tabl[i]);
+    }
+    printf("number aldi tri suprime :");
+    scanf("%d",pos);
+
+    if (pos <= 0 || pos > taill)
+    {
+        printf("hada ar9m la youjad %d",pos);
+    }
+    else(pos >= 0 || pos < taill)
+    {
+        for (int h = pos; h < taill;h++)
         {
-            printf("i= %d,j = %d",i,j);
+            int m = tabl[h + 1];
+            tabl[h + 1] = tabl[h];
+            tabl[h] = m;
         }
-        printf("= i =%d,j= %d",i,j);
+        taill--;
+    }
+    printf("number ;");
+    for (int i = 0;i < taill;i++)
+    {
+        printf("%d",tabl[i]);
     }
     return (0);
 }
